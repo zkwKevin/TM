@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul{
+    overflow: hidden;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: antiquewhite;
+    -webkit-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+}
+
+ul li.left {
+    float: left;
+} 
+
+ul li.others {
+    float: right; 
+}
+
+ul li.handel {
+    float: right;
+    display: none;
+    cursor: pointer;
+}
+li a {
+    
+    display: block;
+    color: #070000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+li a:hover{
+    background-color: #ffb731;
+    color: black;
+}
+
+.active {
+    background-color: #ffb731;
+}
+
+@media screen and (max-width:1024px) {
+    ul {
+        max-height: 48px;
+    }
+
+   
+    ul li.handel {display:block;} 
+    
+    ul li.others
+     {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0px;
+        display: block;
+        text-align: center;
+    }  
+
+    .stretch {
+        max-height: 250px;
+    }
+
+}
+
+@media screen and (max-width:375px){
+    ul {
+        max-height: 48px;
+    }
+
+    .stretch {
+        max-height: 300px;
+    }
+
+    ul li.handel {display:block;} 
+    
+    ul li.min
+     {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0px;
+        display: block;
+        text-align: center;
+    }  
+}
+
+
+
+/* SearchBar */
+.left.min {
+    float: left; 
+  }
+.left.min input[type=text] {
+    width: 90px;
+    padding: 6px 0px 6px 30px;
+    margin-top: 8px;
+    margin-left: 8px;
+    border-radius: 4px;
+    font-size: 17px;
+    border: none;
+    background-color: antiquewhite;
+    background-image: url('icons/search-solid.svg');
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+.left.min input[type=text]:focus {
+    width: 100%;
+    background-color:white;  
+}
+
+
+
+

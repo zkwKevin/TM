@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TM</title>
+
+    <environment name="Development">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/brands.css" integrity="sha384-7xAnn7Zm3QC1jFjVc1A6v/toepoG3JXboQYzbM0jrPzou9OFXm/fY6Z/XiIebl/k" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG" crossorigin="anonymous">
+        <link rel="stylesheet" href="~/css/test.css" />
+        <link rel="stylesheet" href="~/css/navbar.css" />
+        <link rel="stylesheet" href="~/css/loginsign.css" />
+    </environment>
+</head>
+<body>
+    <ul class="nav">
+        <li class="left"><a class="active" asp-area="" asp-controller="Home" asp-action="Index">ToMeet</a></li>
+        <li class="handel">
+            <a><i class="fa fa-bars"></i></a>
+        </li>
+        <li class="left min">
+            
+            <form asp-controller="Events" asp-action="index" method="GET">
+                <input type="text" placeholder="Search" name="searchString">
+            </form>
+            
+        </li>
+    
+        <!-- <li class='others min'><a class="login unique" >Log in</a></li>
+        <li class='others min'><a class="signup unique" >Sign up</a></li> -->
+        <!-- <li class='others min'><a asp-area="Identity" asp-page="/Account/Register">dianwo</a></li> -->
+        <partial name="_LoginPartial" />
+        <li class='others min'><a  asp-area="" asp-controller="Home" asp-action="About">Publish</a></li>
+        <li class='others min'><a  asp-area="" asp-controller="Events" asp-action="Index">Explore</a></li>
+    </ul>
+    
+    
+    <div id="modal-wrapper" class="modal">
+        <!--Login-->
+        <form class="modal-content1 animate" asp-action="" method="">
+            <div class="container1">
+                <span class="close" title="Close PopUp">&times;</span>
+            </div>
+            <div class="container2">
+                
+                <a href="#" class="fb btn">
+                    <i class="fa fa-facebook fa-fw"></i> Login with Facebook
+                </a>
+                <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                    </i> Login with Google+
+                </a>
+                
+                <div class="hr-sect">or</div>
+                <input type="text" placeholder="Enter Email" name="uemail">
+                <input type="password" placeholder="Enter Password" name="psw">        
+                <input type="submit" value="Login">
+                <input type="checkbox" style="text-decoration:none; text-align:left;"> 
+                <label>Remember me</label>  
+                <div class="forgotpw">
+                    <a href="#" style="text-decoration:none;">Forgot Password ?</a>
+                </div>
+                <hr>
+                <p style="margin-top:15px;text-align:center;">Don’t have an account? 
+                    <a  class="switchToSignup">Sign up</a>
+                </p>
+            </div>
+        </form>
+        <!--SignUp-->
+        <form class="modal-content2 animate" asp-action="" method="">
+            <div class="container1">
+                <span class="close" title="Close PopUp">&times;</span>
+            </div>
+            <div class="container2">
+                
+                <a href="#" class="fb btn">
+                    <i class="fa fa-facebook fa-fw"></i> Sign up with Facebook
+                </a>
+                <a href="#" class="google btn"><i class="fa fa-google fa-fw">
+                    </i> Sign up with Google+
+                </a>
+                
+                <div class="hr-sect">or</div>
+                <input type="text" placeholder="Enter Email" name="uemail">
+                <input type="text" placeholder="Enter First name" name="ufname">
+                <input type="text" placeholder="Enter Last name" name="ulname">
+                <input type="password" placeholder="Enter Password" name="psw">  
+                <h3>Birthday</h3> 
+                <div style="text-align:center; margin:0 0 8px 0">
+                    <select>
+                        <option value="" selected disabled hidden>Day</option>
+                        <option value="1">One</option>
+                    </select>  
+                    <select>
+                        <option value="" selected disabled hidden>Month</option>
+                        <option value="1">One</option>
+                    </select>  
+                    <select>
+                        <option value="" selected disabled hidden>Year</option>
+                        <option value="1">One</option>
+                    </select>
+                </div>
+                <input type="submit" value="Sign up">
+                <input type="checkbox" style="text-decoration:none; text-align:left;"> 
+                <label>I don’t want to receive marketing messages from ToMeet.</label>  
+                <hr>
+                <p style="margin-top:15px;text-align:center;">Already have an account? 
+                    <a class="switchToLogin">Login</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+
+    <partial name="_CookieConsentPartial" />
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2018 - TM</p>
+        </footer>
+    </div>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=2110219079267346&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+    <environment name="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/navbar.js" ></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

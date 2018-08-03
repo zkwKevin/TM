@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+  }
+/* Background-div*/
+.modal {
+    display:none;
+    /* visibility: visible; */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content Box-form */
+.modal-content1 {
+    display: none;
+    background-color: #fefefe;
+    margin: 50px auto 15% auto;
+    border: 1px solid #888;
+    width: 520px; 
+    padding-bottom: 30px;
+    height: auto;
+}
+
+.modal-content2 {
+    display: none;
+    background-color: #fefefe;
+    margin: 50px auto 15% auto;
+    border: 1px solid #888;
+    width: 520px; 
+    padding-bottom: 30px;
+    height: auto;
+}
+
+.container1 {
+    margin: 0 0 12px 0;
+    position: relative;
+    
+}
+
+.container2 {
+    margin: 0 0 12px 0;
+    position: relative;
+    padding: 0 40px;
+}
+
+
+/* The Close Button (x) */
+.close {
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+    display: block;
+    text-align: right;
+}
+.close:hover,.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+
+
+input[type=submit], .btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none; /* remove underline from anchors */   
+  }
+
+  /* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    font-size:17px;
+    line-height: 20px;
+}
+
+  .fb {
+    background-color: #3B5998;
+    color: white;
+  }
+
+  .google {
+    background-color: #dd4b39;
+    color: white;
+  }
+
+/* style the submit button */
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+
+  input:hover,
+  .btn:hover {
+    opacity: 1;
+  }
+
+/* .fb-login-button {   
+    padding: 2px 20px;
+    margin: 3px 26px;
+    display: inline-block;
+    box-sizing: border-box;
+} */
+
+
+
+hr {
+    border-top: 1px solid #ccc;
+}
+
+.hr-sect {
+	display: flex;
+	flex-basis: 100%;
+	align-items: center;
+	color: rgba(0, 0, 0, 0.35);
+	margin: 8px 0px;
+}
+.hr-sect::before,
+.hr-sect::after {
+	content: "";
+	flex-grow: 1;
+	background: rgba(0, 0, 0, 0.35);
+	height: 1px;
+	font-size: 0px;
+	line-height: 0px;
+	margin: 0px 8px;
+}
+
+.forgotpw {
+    text-align: center;
+    margin: 15px 0 12px 0;
+    position: relative;
+}
+
+/* .animate {
+    animation: zoom 0.4s;
+} */
+
+@keyframes zoom1 {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+@keyframes zoom2 {
+    from {transform: scale(1)} 
+    to {transform: scale(0)}
+}
+
+
+@media screen and (max-width:768px) {
+    .modal-content1  {
+        background-color: #fefefe;
+        margin: 10% auto;
+        border: 1px solid #888;
+        width: auto; 
+        padding-bottom: 30px;
+        height: auto;
+    }
+
+    .modal-content2  {
+        background-color: #fefefe;
+        margin: 10% auto;
+        border: 1px solid #888;
+        width: auto; 
+        padding-bottom: 30px;
+        height: auto;
+    }
+
+}
+
+a.switchToLogin {
+    cursor: pointer;
+    color: #dd4b39;   
+}
+
+a.switchToSignup {
+    cursor: pointer;
+    color: #dd4b39;   
+}
+
+select {
+    width: 30%;
+    margin: 0px auto;
+    font: 400 12px/1.3 "Helvetica Neue", sans-serif;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #888;
+    line-height: 1;
+    outline: 0;
+    color: #888;
+    border-color: #888;
+    padding: 0.65em 2.5em 0.55em 0.75em;
+    border-radius: 3px;
+    background: linear-gradient(#888, #888) no-repeat,
+                linear-gradient(-135deg, rgba(255,255,255,0) 50%, white 50%) no-repeat,
+                linear-gradient(-225deg, rgba(255,255,255,0) 50%, white 50%) no-repeat,
+                linear-gradient(#888, #888) no-repeat;
+    background-color: white;
+    background-size: 1px 100%, 20px 20px, 20px 20px, 20px 60%;
+    background-position: right 20px center, right bottom, right bottom, right bottom;   
+  }
+
+
+
